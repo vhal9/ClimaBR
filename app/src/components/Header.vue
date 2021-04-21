@@ -25,6 +25,7 @@
         font-size: 22px;
         color:white;
         padding: 10px 20px;
+        letter-spacing: 8px;
     }
 
 
