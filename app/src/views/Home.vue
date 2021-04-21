@@ -3,9 +3,9 @@
     <div class="Home">
 
         <b-container class='formulario' >
-            <b-row>
-                <b-form-input prepend="%" placeholder="Buscar cidade..." trim ></b-form-input>
-            </b-row>
+            <b-form-input prepend="%" placeholder="Buscar cidade..." trim >
+
+            </b-form-input>
             
         </b-container>
 
@@ -19,7 +19,7 @@
         </b-container>
         
     </div>
-    
+
 </template>
 
 <script>
@@ -28,10 +28,7 @@ export default {
     name: "Home",
     data() {
       return {
-            items:[
-                // {cidade: "Volta Redonda", estado: "RJ"},
-                // {cidade: "Volta Grande", estado: "MG"}
-            ]
+            items:[]
       }
     },
 }
