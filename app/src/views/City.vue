@@ -10,8 +10,11 @@
 
 <script>
 
+    
+
     export default {
         name: "Home",
+        
         data: () => ({
 
             id: '',
@@ -23,7 +26,6 @@
             var url_string = window.location.href; 
             var url = new URL(url_string); 
             var pathname = url.pathname;
-            console.log(pathname.split('/'));
             this.id = pathname.split('/')[2];
         },
 
