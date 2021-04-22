@@ -15,7 +15,7 @@
     import MainCard from '../components/cityWeather/MainCard.vue';
 
     export default {
-        
+
         components: { MainCard },
 
         name: "Home",
@@ -23,7 +23,11 @@
         data: () => ({
 
             id: '',
-            city: null,
+            city: {
+                atualizacao: '',
+                nome: '',
+                previsao: [{tempo: ''}]
+            },
 
         }),
 

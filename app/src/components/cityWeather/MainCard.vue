@@ -19,9 +19,6 @@
         
         data: () => ({
 
-            id: '',
-            city: null,
-
         }),
 
         mounted(){
