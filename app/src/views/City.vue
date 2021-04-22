@@ -1,8 +1,8 @@
 <template>
+
     <div>
 
-    <h1>heuehueheuhe</h1>
-    <h2>{{id}}</h2>
+        <MainCard :att="city.atualizacao" :city="city.nome" :icone="city.previsao[0].tempo"/>
 
     </div>
 
@@ -11,14 +11,19 @@
 <script>
 
     import { getLabelOption } from '../Utils/weatherHelper';
-    //import sp244 from '../Utils/previsao244.xml';
+    import previsao244 from '../Utils/previsao244';
+    import MainCard from '../components/cityWeather/MainCard.vue';
 
     export default {
+        
+        components: { MainCard },
+
         name: "Home",
         
         data: () => ({
 
             id: '',
+            city: null,
 
         }),
 
@@ -35,7 +40,9 @@
         methods: {
 
             listar() {
-                console.log('lb', getLabelOption('ppct'));
+                console.log('lb', getLabelOption('in'));
+                this.city = previsao244;
+                console.log('city', this.city);
             }
         }
 
