@@ -1,0 +1,35 @@
+{
+    "nome": "São Paulo",
+    "uf": "SP",
+    "atualizacao": "2021-04-21",
+    "previsao": [
+       {
+          "dia": "2021-04-22",
+          "tempo": "ci",
+          "maxima": "21",
+          "minima": "15",
+          "iuv": "8.0"
+       },
+       {
+          "dia": "2021-04-23",
+          "tempo": "pn",
+          "maxima": "23",
+          "minima": "15",
+          "iuv": "7.0"
+       },
+       {
+          "dia": "2021-04-24",
+          "tempo": "ps",
+          "maxima": "27",
+          "minima": "14",
+          "iuv": "7.0"
+       },
+       {
+          "dia": "2021-04-25",
+          "tempo": "e",
+          "maxima": "27",
+          "minima": "18",
+          "iuv": "7.0"
+       }
+    ]
+ }
