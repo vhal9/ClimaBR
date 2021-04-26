@@ -17,9 +17,8 @@ const getters = {
 
 const mutations = {
 
-    [mutationTypes.SET_STORE_CITYS] (state, data){
-        var dados = parseXmlToJson.xml2js(data);
-        state.citys = dados.cidades.cidade;
+    [mutationTypes.SET_STORE_CITYS] (state, citys){
+        state.citys = citys;
     },
 
     [mutationTypes.CLEAN_CITYS_ACTION] (state){
@@ -32,7 +31,13 @@ const actions = {
     getCitysAction({ commit }, nome) {
         return new Promise((resolve) => {
             cityServices.listCitys(nome).then(response =>{
-                commit(mutationTypes.SET_STORE_CITYS, response.data);
+                
+                var citysFound = parseXmlToJson.xml2js(response.data).cidades.cidade;
+                if (citysFound) {
+                    commit(mutationTypes.SET_STORE_CITYS, citysFound);
+                } else {
+                    commit(mutationTypes.CLEAN_CITYS_ACTION);
+                }
                 resolve();
             })
             .catch(erro => {
