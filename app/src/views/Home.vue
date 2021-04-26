@@ -84,6 +84,11 @@ export default {
 </script>
 
 <style scoped>
+
+    .Home{
+        margin-top: 5rem;
+    }
+
     label {
         margin: 0px !important;
     }

@@ -19,6 +19,11 @@
 <style scoped>
     .header {
         background-color: #3880ff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
     }
 
     #titulo {
