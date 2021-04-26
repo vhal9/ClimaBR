@@ -106,6 +106,9 @@ export default {
 
     .result-empty-container {
         font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     a {
