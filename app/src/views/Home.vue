@@ -2,7 +2,7 @@
 
     <div class="Home">
 
-        <b-container class="form-container" >
+        <b-container class="form-container col-sm-8" >
             <b-form-input class="col-sm-8" prepend="%" placeholder="Buscar cidade..." trim v-model='search' />
             <b-button 
                 class="col-sm-2 button-search" 
@@ -15,7 +15,7 @@
         </b-container>
 
         <b-container class="result-container">
-            <hr class="col-sm-7">
+            <hr class="col-sm-7 line-divisor">
             <div v-for="item of citys" :key="item.id" class="col-sm-7">
                 <a href="#" >
                     <div class="card-container">
@@ -24,7 +24,7 @@
                             <span>{{item.uf}}</span>
                         </div>
                         <div class="card-item-container">
-                            <b-icon icon="arrow-right" />
+                            <b-icon size="small" scale="1.3" icon="arrow-right" />
                         </div>
                     </div>
                 </a>
@@ -92,7 +92,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 60%;
+
         margin-top: 2%;
         gap:1rem;
     }
@@ -115,6 +115,11 @@ export default {
         text-decoration: none !important;
     }
 
+    a:hover{
+        color:blue;
+        
+    }
+
 
     .card-container {
         display: flex;
@@ -129,6 +134,10 @@ export default {
         color:#333;
 
     }
+    .card-container:hover{
+        color: white;
+        background-color: blue;
+    }
     
     .card-container:first-child{
         margin-top: 1.5rem;
@@ -139,5 +148,9 @@ export default {
         flex-direction: column;
         gap: 0.4rem;
         margin: 2%;
+    }
+
+    .line-divisor {
+        margin-bottom: 0;
     }
 </style>
