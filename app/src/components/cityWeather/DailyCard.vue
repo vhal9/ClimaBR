@@ -58,7 +58,6 @@
 <style scoped>
 
     #daily-weather{
-        border: 1px solid;
         min-height: 150px;
         margin: 10px;
         padding: 5px;
@@ -66,6 +65,11 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        background-color: rgb(188, 203, 235);
+        border-radius: 15px;
+
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.78); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.78);
     }
 
     .weather{
