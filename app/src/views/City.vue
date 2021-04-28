@@ -124,7 +124,7 @@
 <style scoped>
     #weather-panel{
         background-color: white;
-        background-color: rgba(255, 255, 255, 0.822);
+        background-color: rgba(255, 255, 255, 0.719);
 
         border-radius: 30px;
         padding: 15px;

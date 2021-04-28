@@ -88,6 +88,14 @@ export default {
 
     .Home{
         margin-top: 5rem;
+
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.719);
+
+        border-radius: 30px;
+        padding: 15px;
+        -webkit-box-shadow: 3px 5px 27px 5px rgba(0,0,0,0.78); 
+        box-shadow: 3px 5px 27px 5px rgba(0,0,0,0.78);
     }
 
     label {
