@@ -32,6 +32,6 @@
   text-align: center;
   color: #2c3e50;
 
-  background-image: url("https://wallpapercave.com/wp/wp2839514.jpg");
+  /* background-image: url("https://wallpapercave.com/wp/wp2839514.jpg"); */
 }
 </style>

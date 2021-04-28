@@ -1,11 +1,12 @@
 <template>
-    <div class="Header">
-        <b-container fluid class="header" variant="primary">
-            <b-row sm="12" align-v="center" align-h="center" id="titulo">
-                <label >CLIMABR</label>
-            </b-row>
-        </b-container>        
-    </div>
+  <b-navbar id="titulo" variant="primary" type="light">
+    <b-navbar-brand href="/">
+        <b-icon color="white" icon="house-door"/>
+    </b-navbar-brand>
+    <b-navbar-brand id="titulo">
+        ClimaBR
+    </b-navbar-brand>
+  </b-navbar>
 </template>
 
 <script>
