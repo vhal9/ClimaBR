@@ -90,7 +90,7 @@ export default {
         margin-top: 5rem;
 
         background-color: white;
-        background-color: rgba(255, 255, 255, 0.719);
+        background-color: rgba(255, 255, 255, 0.349);
 
         border-radius: 30px;
         padding: 15px;
@@ -145,7 +145,7 @@ export default {
         border: 1px solid rgba(0, 0, 0, 0.125);
         border-radius: 0.5rem;
 
-        color:#333;
+        color: white;
 
     }
     .card-container:hover{

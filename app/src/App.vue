@@ -32,7 +32,8 @@
   text-align: center;
   color: #2c3e50;
   background-color: rgb(69, 111, 136);
+  color: white;
 
-  /* background-image: url("https://wallpapercave.com/wp/wp2839514.jpg"); */
+  background-image: url("https://wallpapercave.com/wp/wp2839514.jpg");
 }
 </style>

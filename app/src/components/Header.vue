@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="titulo" variant="primary" type="light">
+  <b-navbar id="titulo" variant="secondary" type="light">
     <b-navbar-brand href="/">
         <b-icon color="white" icon="house-door"/>
     </b-navbar-brand>

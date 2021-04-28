@@ -65,7 +65,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        background-color: rgb(188, 203, 235);
+        background-color: rgba(102, 144, 233, 0.322);
         border-radius: 15px;
 
         -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.78); 
