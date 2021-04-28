@@ -41,6 +41,7 @@
 
 <script>
 
+import { removeAcents } from '../Utils/removeAcents';
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -57,24 +58,24 @@ export default {
         return {
             search:'',
             citysNotFound: false,
-            isSearching: false
         }
+    },
+    mounted(){
+        this.search = '';
     },
     methods: {
         ...mapActions("citysModule", ["getCitysAction"]),
 
         searchCitys(){
             //adicionar validações
-            this.isSearching = true;
-            (this.getCitysAction(this.search)).then(() => {
+            let query = removeAcents(this.search);
+            (this.getCitysAction(query)).then(() => {
                 this.citysNotFound = (this.citys.length == 0);
-                console.log(this.citysNotFound);
             });
             
         },
 
         desabilitaBotaoPesquisar(){
-            console.log("teste", this.search, "teste");
             if (this.search.length < 3)
                 return true;
             return false;
