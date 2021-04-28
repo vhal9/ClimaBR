@@ -34,6 +34,9 @@ const actions = {
                 
                 var citysFound = parseXmlToJson.xml2js(response.data).cidades.cidade;
                 if (citysFound) {
+                    if (!Array.isArray(citysFound)) {
+                        citysFound = [citysFound];
+                    }
                     commit(mutationTypes.SET_STORE_CITYS, citysFound);
                 } else {
                     commit(mutationTypes.CLEAN_CITYS_ACTION);
