@@ -6,15 +6,15 @@
             <b-col class="weather" sm="7">
 
                 <b-col class="min-max" sm="2">
-                    <div><b-icon color="red" icon="thermometer-half"/>{{max}}°</div>
-                    <div><b-icon color="blue" icon="thermometer"/>{{min}}°</div>
+                    <div><b-icon color="red" icon="thermometer-half"/>{{minima}}°</div>
+                    <div><b-icon color="blue" icon="thermometer"/>{{maxima}}°</div>
                 </b-col>
 
                 <b-col class="img-cont" sm="10">
-                    <b-img 
+                    <b-img-lazy
+                        fluid
                         class="img"
-                        :src="'../images/' + info.icon + '.png'"
-
+                        :src="weatherIcon"
                     />
                 </b-col>
                 
@@ -22,20 +22,16 @@
 
             <b-col class="data" sm="5">
 
-                <!-- <b-row class="city">
-                    {{city}}
-                </b-row> -->
-
                 <b-row class="label">
-                    {{info.label}}
+                    {{label}}
                 </b-row>
 
                 <b-row class="date">
-                    {{att}}
+                    {{diaSemana}}, {{dia}}
                 </b-row>
 
                 <b-row class="desc">
-                    {{info.description}}
+                    {{description}}
                 </b-row>
 
             </b-col>
@@ -52,15 +48,17 @@
         name: "CityCard",
 
         props: {
-            city: String,
-            att: String,
-            info: null,
-            min: String,
-            max: String,
-            desc: String,
-        }
-
+            dia: String,
+            diaSemana: String,
+            weatherIcon: String,
+            label: String,
+            description: String,
+            iuv: String,
+            maxima: String,
+            minima: String,
+        },
     }
+    
 </script>
 
 <style scoped>
@@ -69,7 +67,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        max-width: 600px;
+        flex-wrap: wrap;
+        align-items: flex-end;
     }
 
     .weather{
@@ -78,6 +77,7 @@
         display: flex;
         align-items: flex-start;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .img-cont {
@@ -99,10 +99,13 @@
     }
 
     .data {
+        margin: 0 !important;
+        padding: 10px;
         display: flex;
-        flex-direction: column;
         align-items: flex-end;
-        justify-content: space-evenly;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-end;
     }
 
     .date {
@@ -115,6 +118,7 @@
     }
 
     .desc {
+        margin-top: 25px;
         font-size: 12px;
     }
 
