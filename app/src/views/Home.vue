@@ -17,7 +17,7 @@
         <b-container class="result-container">
             <hr class="col-sm-7 line-divisor">
             <div v-for="item of citys" :key="item.id" class="col-sm-7">
-                <a href="#" >
+                <a :href="'city/' + item.id">
                     <div class="card-container">
                         <div class="card-item-container">
                             <span>{{item.nome}}</span>
