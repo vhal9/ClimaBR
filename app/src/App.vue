@@ -25,15 +25,24 @@
 
 
 <style>
-#app {
-  font-family: Ubuntu, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: rgb(69, 111, 136);
-  color: white;
 
-  background-image: url("https://wallpapercave.com/wp/wp2839514.jpg");
-}
+  body, html {
+    margin: 0 !important;
+    height: 100% !important;
+  }
+
+  #app {
+    font-family: Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    background-color: rgb(69, 111, 136);
+    color: white;
+    margin: 0 !important;
+    height: 100% !important;
+
+    background-image: url("https://wallpapercave.com/wp/wp2839514.jpg");
+  }
+  
 </style>
