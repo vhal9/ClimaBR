@@ -133,17 +133,21 @@
 
         border-radius: 30px;
         padding: 15px;
-        max-width: 90vh;
+        max-width: 100vh;
         -webkit-box-shadow: 3px 5px 27px 5px rgba(0,0,0,0.78); 
         box-shadow: 3px 5px 27px 5px rgba(243, 237, 237, 0.63);
+
+        height: 90vh;
+        overflow-y: scroll;
+
     }
 
     #weather-box {
         height: 90%;
-        display: grid;
-        align-content: center;
              
     }
+
+
 
     .dailyCards{
         display: flex;
@@ -162,14 +166,26 @@
         font-weight: bolder;
         flex-direction: column;
         align-items: flex-end;
+
+        
     }
     .lastAtt{
         font-size: 10px;
         font-weight: lighter;
     }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(76, 76, 85);
+        border-radius: 20px;
+        border: 1px transparent;
+    }
 </style>
 
-<style>
+<style >
     .row{
         margin: 0px !important;   
     }

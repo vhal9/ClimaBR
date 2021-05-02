@@ -80,8 +80,6 @@
         flex-wrap: wrap;
     }
 
-    .img-cont {
-    }
     .img {
         min-width: 100%;
         min-height: 100%;
@@ -90,12 +88,14 @@
     .min-max{
         min-height: 150px;
         display: flex;
-        font-weight: bolder;
-        font-size: large;
+        flex-wrap: wrap;
         justify-content: space-around;
 
+        font-weight: bolder;
+        font-size: large;
+
         align-items: center;
-        flex-direction: column;
+        
     }
 
     .data {
