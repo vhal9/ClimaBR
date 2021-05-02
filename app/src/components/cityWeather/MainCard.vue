@@ -110,6 +110,7 @@
 
     .date {
         font-size: 13px;
+        font-weight: bolder;
     }
 
     .label {

@@ -2,7 +2,7 @@
 
     <b-container id="daily-weather">
 
-            <b-row class="data" sm="5">
+            <b-row class="data">
 
                 <b-row class="day">
                     {{diaSemana}}
@@ -11,12 +11,16 @@
                 <b-row class="date">
                     {{dia}}
                 </b-row>
+            
+                <b-row class="label">
+                    {{label}}
+                </b-row>
 
             </b-row>
 
-            <b-row class="weather" sm="7">
+            <b-row class="weather">
 
-                <b-row class="img-cont" sm="10">
+                <b-row class="img-cont">
                     <b-img-lazy
                         fluid
                         class="img"
@@ -24,7 +28,7 @@
                     />
                 </b-row>
 
-                <b-row class="min-max" sm="2">
+                <b-row class="min-max">
                     <b-icon color="red" icon="thermometer-half"/>{{minima}}°
                     <b-icon color="blue" icon="thermometer"/>{{maxima}}°
                 </b-row>
@@ -59,6 +63,7 @@
 
     #daily-weather{
         min-height: 150px;
+        max-width: 18vh;
         margin: 10px;
         padding: 5px;
         display: flex;
@@ -103,12 +108,9 @@
     }
 
     .data {
-        margin: 0 !important;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .day {
@@ -121,13 +123,9 @@
     }
 
     .label {
-        font-size: 18px;
+        font-size: 10px;
         font-weight: bolder;
     }
 
-    .desc {
-        margin-top: 25px;
-        font-size: 12px;
-    }
 
 </style>

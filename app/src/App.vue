@@ -28,6 +28,7 @@
 
 
 <style>
+
 #app {
   font-family: Ubuntu, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,4 +48,5 @@
   height: 90%;
   
 }
+
 </style>
