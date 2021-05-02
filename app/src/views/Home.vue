@@ -6,7 +6,6 @@
             <b-form-input class="col-sm-8" prepend="%" placeholder="Buscar cidade..." trim v-model='search' />
             <b-button 
                 class="col-sm-2 button-search" 
-                variant="primary" 
                 @click="searchCitys"
                 :disabled="isDisabled"
             >
@@ -123,9 +122,23 @@ export default {
         height: 80%;
         overflow-y: scroll;
     }
+
     .col-sm-7{
         flex:none !important;
     } 
+
+    .button-search{
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 5%;
+    }
+
+    .button-search:disabled {
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 5%;
+    }
+
 
     .result-empty-container {
         font-weight: 800;
@@ -138,11 +151,6 @@ export default {
         text-decoration: none !important;
     }
 
-    a:hover{
-        color:blue;
-        
-    }
-
 
     .card-container {
         display: flex;
@@ -151,7 +159,7 @@ export default {
         justify-items: center;
         align-items: center;
 
-        border: 1px solid rgba(0, 0, 0, 0.125);
+        border: 2px solid rgba(0, 0, 0, 0.25);
         border-radius: 0.5rem;
 
         color: white;
@@ -159,7 +167,7 @@ export default {
     }
     .card-container:hover{
         color: white;
-        background-color: blue;
+        background-color: rgb(0, 0, 0);
     }
     
     .card-container:first-child{
@@ -175,6 +183,9 @@ export default {
 
     .line-divisor {
         margin-bottom: 0;
+        height: 0.5px;
+        background-color:black;
+        color: black;
     }
 
     ::-webkit-scrollbar {
