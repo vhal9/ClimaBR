@@ -87,15 +87,18 @@ export default {
 <style scoped>
 
     .Home{
-        margin-top: 5rem;
 
-        background-color: white;
         background-color: rgba(255, 255, 255, 0.349);
 
-        border-radius: 30px;
+        border-radius: 3rem;
         padding: 15px;
         -webkit-box-shadow: 3px 5px 27px 5px rgba(0,0,0,0.78); 
         box-shadow: 3px 5px 27px 5px rgba(0,0,0,0.78);
+
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 100%;
+
     }
 
     label {
@@ -116,7 +119,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        height: 80%;
+        overflow-y: scroll;
     }
+    .col-sm-7{
+        flex:none !important;
+    } 
 
     .result-empty-container {
         font-weight: 800;
@@ -167,4 +176,15 @@ export default {
     .line-divisor {
         margin-bottom: 0;
     }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(76, 76, 85);
+        border-radius: 20px;
+        border: 1px transparent;
+    }
+    
 </style>

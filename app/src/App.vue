@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <router-view />
+    <div class="body-container">
+      <router-view />
+    </div>
+    
     <!-- <Footer /> -->
   </div>
 </template>
@@ -30,10 +33,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background-color: rgb(69, 111, 136);
-  color: white;
 
+  height: 100vh;
+
+  overflow:hidden;
+
+}
+
+.body-container {
+  
+  color: white;
   background-image: url("https://wallpapercave.com/wp/wp2839514.jpg");
+  height: 90%;
+  
 }
 </style>
