@@ -1,3 +1,8 @@
+/**
+ * Página inicial para pesquisa de cidades
+ */
+
+// escopo do html
 <template>
 
     <div class="Home">
@@ -38,6 +43,7 @@
 
 </template>
 
+// escopo do Vue
 <script>
 
 import { removeAcents } from '../Utils/removeAcents';
@@ -47,33 +53,46 @@ export default {
     name: "Home",
 
     computed: {
+        // importa o modulo de cidades, que mapeia o array de cidades
         ...mapGetters("citysModule", ["citys"]),
+
+        // observador para desabilitar/habilitar botão de pesquisar
         isDisabled: function(){
 			return this.desabilitaBotaoPesquisar();
 		},
     },
 
+    // variaveis da página
     data() {
         return {
             search:'',
             citysNotFound: false,
         }
     },
+
+    // escopo inicializavel com a página
     mounted(){
         this.search = '';
     },
+
+    // métodos da página Home
     methods: {
+        // importa os métodos do módulo de cidades
         ...mapActions("citysModule", ["getCitysAction"]),
 
+        // função para buscar as cidades
         searchCitys(){
-            //adicionar validações
+            // remove acentos da cidade buscada
             let query = removeAcents(this.search);
-            (this.getCitysAction(query)).then(() => {
+            
+            // busca cidades 
+            this.getCitysAction(query).then(() => {
                 this.citysNotFound = (this.citys.length == 0);
             });
             
         },
 
+        // função para verificar se botão deve ou não estar desabilitado
         desabilitaBotaoPesquisar(){
             if (this.search.length < 3)
                 return true;
@@ -83,6 +102,7 @@ export default {
 }
 </script>
 
+// escopo do CSS
 <style scoped>
 
     .Home{

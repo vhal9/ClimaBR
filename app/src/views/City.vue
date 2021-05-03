@@ -1,3 +1,8 @@
+/**
+ * Página para apresentar os dados da cidade e do clima
+ */
+
+// escopo do html
 <template>
 
     <div id="weather-box">
@@ -48,6 +53,7 @@
 
 </template>
 
+//escopo do Vue
 <script>
 
     import moment from 'moment';
@@ -58,14 +64,17 @@
 
     export default {
 
+        // declara os componentes importados
         components: { MainCard, DailyCard },
 
         name: "Home",
 
         computed: {
+            // importa o modulo de previsões, que mapeia o objeto de cidade e o array de previsões
             ...mapGetters("predictionModule", ["predictions", "city"]),
         },
         
+        // declara variaveis da página de informações da cidade e previsões
         data: () => ({
 
             id: '',
@@ -82,12 +91,13 @@
 
         }),
 
+        // escopo inicializavel com a página
         mounted(){
 
             var url_string = window.location.href; 
             var url = new URL(url_string); 
             this.id = url.pathname.split('/')[2];
-            
+            console.log(this.$route.params.id);
             this.getCityWeather(this.id);
         },
 
@@ -95,16 +105,15 @@
 
             ...mapActions("predictionModule", ["getPredictions"]),
 
-
+            // buscar dados das previsões e da cidade
             getCityWeather(id) {
-                
-
                 (this.getPredictions(id)).then( () => {
                     this.formatCity();
                     this.done = true;
                 });
             },
 
+            // função para formatar os dados de cidade e previsão
             formatCity() {
                 this.formatedCity.nome = this.city.nome;
                 this.formatedCity.uf = this.city.uf;
@@ -118,8 +127,6 @@
                     t.dia = moment(t.dia, 'YYYY-MM-DD').format('L');
                     t.info = getLabelOption(t.tempo);
                 })
-
-                console.log('fp', this.formatedPrediction);
                 
             }
         }
@@ -127,6 +134,7 @@
     }
 </script>
 
+// escopo do CSS
 <style scoped>
     #weather-panel{
         background-color: rgba(166, 200, 238, 0.349);
