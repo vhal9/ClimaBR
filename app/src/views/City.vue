@@ -93,11 +93,7 @@
 
         // escopo inicializavel com a página
         mounted(){
-
-            var url_string = window.location.href; 
-            var url = new URL(url_string); 
-            this.id = url.pathname.split('/')[2];
-            console.log(this.$route.params.id);
+            this.id = this.$route.params.id
             this.getCityWeather(this.id);
         },
 
