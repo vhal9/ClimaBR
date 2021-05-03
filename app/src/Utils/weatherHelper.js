@@ -1,3 +1,9 @@
+/**
+ * Função util para mapear as imagens e informações sobre o clima
+ * utiliza um identificador do clima para retornar as informações sobre o mesmo
+ * @param {String} tempo 
+ * @returns {Object} label
+ */
 export const getLabelOption = tempo => {
     let label;
 
