@@ -1,8 +1,12 @@
+/**
+ * Modulo de previsões, para manter os dados da previsão e da cidade
+ */
 import * as mutationTypes from "../mutation_types";
 import predictionServices from "../../services/prediction.service";
 import X2JS from 'x2js';
 var parseXmlToJson = new X2JS();
 
+// objeto de cidade e array de previsões
 const state = {
     city: {
         nome:'',
@@ -12,6 +16,7 @@ const state = {
     predictions: []
 };
 
+// getters de cidade e de previsões
 const getters = {
     city: (state) => {
         return state.city;
@@ -21,6 +26,7 @@ const getters = {
     }
 };
 
+// mutations - similar aos metodos SET
 const mutations = {
 
     [mutationTypes.SET_STORE_CITY] (state, city){
@@ -42,11 +48,14 @@ const mutations = {
     }
 }
 
+// Camada de funções para o módulo de previsões
 const actions = {
 
+    // função para buscar dados da previsão
     getPredictions({commit}, idCity) {
         return new Promise((resolve) => {
             predictionServices.listLastFourDays(idCity).then(response =>{
+                // transforma o retorno no formato xml para json
                 var dados = parseXmlToJson.xml2js(response.data);
                 commit(mutationTypes.SET_STORE_CITY, dados.cidade);
                 commit(mutationTypes.SET_STORE_PREDICTION, dados.cidade.previsao);
