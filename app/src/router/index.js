@@ -6,6 +6,9 @@ import City from '../views/City'
 
 Vue.use(Router);
 
+/**
+ * Controle de rotas da aplicação
+ */
 const routes = [
     {
         path: '/',
