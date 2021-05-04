@@ -152,6 +152,10 @@ export default {
         border: 1px solid black;
         border-radius: 5%;
     }
+    .button-search:hover {
+        background-color: rgb(22, 22, 22);
+        color: gray;
+    }
 
     .button-search:disabled {
         background-color: black;
