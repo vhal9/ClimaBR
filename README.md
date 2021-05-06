@@ -31,3 +31,4 @@ npm run serve
 ```
 
 ### Diagrama de arquitetura do sistema
+![](/docs/DiagramaDeArquitetura.png)
