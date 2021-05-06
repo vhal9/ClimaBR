@@ -11,7 +11,7 @@
 - [Node v10.20 ou superior.](https://nodejs.org/en/download/)
 - [VueJS](https://vuejs.org/)
 - [BootstrapVue](https://bootstrap-vue.org/)
-- [API da CPTEC.](https://www.cptec.inpe.br/)
+- [API da CPTEC.](http://servicos.cptec.inpe.br/XML)
 
 
 ### Instalação
