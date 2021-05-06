@@ -6,6 +6,8 @@
 > Sistema para apresentar dados do clima de uma cidade pesquisada.
 > Os dados do clima são originados do Centro de Previsão de Tempo e Estudos Climáticos - CPTEC
 
+> [Video de apresentação](https://drive.google.com/file/d/1XcwL5wK0xZX6FrKNpfU-d_MrzpaIhOBk/view?usp=sharing)
+
 ### Ferramentas
 
 - [Node v10.20 ou superior.](https://nodejs.org/en/download/)
