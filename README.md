@@ -1,6 +1,6 @@
 # ClimaBR
 
-> Trabalho desenvolvida na disciplina de Implementação e Modelagem de Software.
+> Trabalho desenvolvido na disciplina de Implementação e Modelagem de Software.
 
 ## Resumo:
 > Sistema para apresentar dados do clima de uma cidade pesquisada.
